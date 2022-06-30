@@ -1,4 +1,4 @@
-//Soluão pára o desafio 1 ,usnado oconceito de interface
+//Solução pára o desafio 1 ,usando oconceito de interface
 
 interface Funcionario {
     codigo: number,
