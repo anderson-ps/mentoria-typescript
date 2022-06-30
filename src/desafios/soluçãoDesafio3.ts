@@ -7,21 +7,23 @@ const campoSaldo = document.getElementById('campo-saldo') as HTMLTextAreaElement
 
 campoSaldo.innerHTML = '0';
 
-function somarAoSaldo(soma:number) {
-    //console.log(soma); 
-    let valorInerr = +campoSaldo.innerHTML ;
+let saldoTotal:number = 0;
 
-    console.log(campoSaldo.innerHTML);
+function somarAoSaldo(soma:number) {
     
-    campoSaldo.innerHTML = `${valorInerr + soma}`;
+    saldoTotal += soma;
+    campoSaldo.innerHTML = `${saldoTotal}`;
+    console.log(saldoTotal);
 }
 
 function limparSaldo() {
     campoSaldo.innerHTML = '';
+    saldoTotal = 0;
+    campoSaldo.innerHTML = '0';
 }
 
 botaoAtualizar.addEventListener('click', function () {
-    somarAoSaldo(+soma.value);
+        somarAoSaldo(+soma.value);
 });
 
 botaoLimpar.addEventListener('click', function (){
