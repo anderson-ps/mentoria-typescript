@@ -15,7 +15,7 @@ const maria = {
 // Isso está correto? Existe diferença entre 'Engenheira' e 'engenheira'? Acredito que não. Isso deve ter sido um erro cometido em desenvolvimento.
 
 // Para resolver isso vamos usar a feature Enum do TypeScript para criar o enum Profissao
-enum Profissao {
+enum Profissaoo {
     Professor,
     Engenheiro,
     Pintor,
@@ -23,23 +23,23 @@ enum Profissao {
 }
 
 // E para garantir que o enum vai ser usado corretamente, vamos criar um tipo Pessoa também
-type Pessoa = {
+type Pessoaa = {
     name: string,
     idade: number,
     casado: boolean,
-    trabalho: Profissao // Aqui inserimos o enum como um tipo
+    trabalho: Profissaoo // Aqui inserimos o enum como um tipo
 }
 
-const gabriel: Pessoa = {
+const gabriel: Pessoaa = {
     name: 'Gabriel',
     idade: 26,
     casado: false,
-    trabalho: Profissao.Engenheiro // E aqui usamos ele para definir de forma padronizada a profissão de cada objeto do tipo Pessoa
+    trabalho: Profissaoo.Engenheiro // E aqui usamos ele para definir de forma padronizada a profissão de cada objeto do tipo Pessoa
 }
 
-const mario: Pessoa = {
+const mario: Pessoaa = {
     name: 'Mario',
     idade: 26,
     casado: false,
-    trabalho: Profissao.Engenheiro // Tudo padronizado e consistente
+    trabalho: Profissaoo.Engenheiro // Tudo padronizado e consistente
 }
